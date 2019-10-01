@@ -1,5 +1,4 @@
 discord 
 datetime 
 emoji 
-sqlite3
 asyncio 
