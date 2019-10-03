@@ -139,6 +139,8 @@ async def on_reaction_add(reaction, user):
         if user.id != 627868021523742771:          
             if reaction.emoji == emj_approve:               
                 await user.add_roles(role)
+		channel_welcome = bot.get_channel(627812771450454046)
+		await channel_welcome.send("Hoşgeldin {} :smile:".format(user.mention))
 
 
 #------------------------------------------------------------------------------------------------#
