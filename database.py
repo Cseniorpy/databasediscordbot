@@ -2,7 +2,6 @@
 
 import discord
 import datetime 
-from datetime import time 
 import time
 import random
 from discord.ext import commands
@@ -39,6 +38,35 @@ async def on_ready():
     channel_bot_test = bot.get_channel(627807374736097310)
     channel_private_experiments = bot.get_channel(627815214422687754)
     public_channel_list = [channel_bot_test,channel_private_experiments]
+
+
+    import shutil, os
+
+    #The destination for the item to move
+    path = '/root/Desktop/gitHubProjects/autonomousDiscordBOT/databaseBot/databasediscordbot'
+
+
+    files = []
+    #Track the .sqlite files specifically
+    sqliteFiles = []
+    #r=root, d=directories, f=files
+
+    #Get the files in a directory
+    while True:
+
+        for r, d, f in os.walk(path):
+            for file in f:
+                files.append(os.path.join(r, file))
+
+        for f in files:
+            #Get only '.sqlite' files to sqliteFiles 
+            if '.sqlite' in str(f):
+                sqliteFiles.append(f)
+
+                #Move the '.sqlite' files to database folder which has not to be in git repository
+                for item in sqliteFiles:
+                    shutil.move(item, '/root/autonomous/discord/autonomous-database')
+            
 
 
 @bot.event 
