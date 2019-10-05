@@ -30,7 +30,7 @@ bot.remove_command('help')
 #WHEN THE BOT IS READY, THE EVENT WILL RISE
 @bot.event 
 async def on_ready():
-    game = discord.Game("Coding Pyhton")
+    game = discord.Game("Coding Python")
     await bot.change_presence(status=discord.Status.idle, activity=game)
 
 
@@ -73,7 +73,7 @@ async def on_message(message):
     user_name_in_database = f"{self_user}_name"
 
     #WITH THIS METHOD, THE BOT ITSELF CAN BE BLOCK 
-    if self_user.id != 627868021523742771 and self_user.id != 627810845971316737:
+    if self_user.id != 627810845971316737 and self_user.id != 627868021523742771:
         connect_database = sqlite3.connect('{}.sqlite'.format(user_name_in_database))
         cursor_database = connect_database.cursor()
 
