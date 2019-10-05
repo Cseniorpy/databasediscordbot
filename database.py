@@ -39,7 +39,7 @@ async def on_ready():
     channel_private_experiments = bot.get_channel(627815214422687754)
     public_channel_list = [channel_bot_test,channel_private_experiments]
 
-
+"""
     import shutil, os
 
     #The destination for the item to move
@@ -67,7 +67,7 @@ async def on_ready():
                 for item in sqliteFiles:
                     shutil.move(item, '/root/autonomous/discord/autonomous-database')
             
-
+"""
 
 @bot.event 
 async def on_member_join(member):
