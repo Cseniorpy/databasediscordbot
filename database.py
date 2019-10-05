@@ -87,7 +87,7 @@ async def on_message(message):
         cursor_database.execute("""SELECT * FROM users WHERE Name= '{}'""".format(user_name_in_database))
         #CHOOSE THE FETCH FOR THE DIFFERENT PURPOSES
         #THIS SECTION IS NOT REQUIRED FOR THE CODE'S CURRENT SITUATION 
-        fetched_one = cursor_database.fetchone()
+        #fetched_one = cursor_database.fetchone()
         
 
         try:
