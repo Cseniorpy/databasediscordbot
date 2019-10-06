@@ -74,7 +74,7 @@ async def on_message(message):
 
     #WITH THIS METHOD, THE BOT ITSELF CAN BE BLOCK 
     if self_user.id != 627810845971316737 and self_user.id != 627868021523742771:
-        connect_database = sqlite3.connect('{}.sqlite'.format(user_name_in_database))
+        connect_database = sqlite3.connect('/root/autonomous/discord/{}.sqlite'.format(user_name_in_database))
         cursor_database = connect_database.cursor()
 
         table = """CREATE TABLE IF NOT EXISTS users
