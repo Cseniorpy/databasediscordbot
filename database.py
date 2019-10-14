@@ -12,8 +12,8 @@ import asyncio
 
 #ASSIGNING THE PREFIX FOR THE BOT
 bot = commands.Bot(command_prefix='!')
-token1 = "NjI3ODY4MDIxNTIzNzQyNzcx.X"
-token2 = "ZOSew.3XlIDyGYe_tInnIt-ePUDSyW_Ic"
+token1 = "NjI3ODY4MDIxNTIzNzQyNzcx."
+token2 = "XaTQ-g.MiFg8qIBxYcPw0kqnU-iscs9gHo"
 TOKEN = token1+token2
 
 #EVERY BOT HAS OWN 'HELP' COMMAND DEFAULT
